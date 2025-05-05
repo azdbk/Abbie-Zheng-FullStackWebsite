@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Bread Basket </title>
+  
+  <!-- components -->
+  <link href="components.css" rel="stylesheet" type="text/css" />
+  <script src="components.js"></script>
+
+  <!-- styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- js, jquery -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="home.js"></script>
+</head>
+
+<body onload="init()">
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- nav -->
+  <header class="nav-container">
+    <a href="index.html" class="logo">Bread Basket</a>
+
+    <nav class="nav-text">
+      <a href="index.html">Home</a></li>
+      <a href="cakes.html">Cakes</a>
+      <a href="pastries.html">Pastries</a>
+      <a href="drinks.html">Drinks</a>
+    </nav>
+  </header>
+
+  <!-- hero -->
+   <video autoplay loop muted plays-inline class="home-hero">
+     <source src="vids/video1.mp4" type="video/mp4">
+   </video>
+
+  <div class="home-hero-text"> Start your day <br> the Haven way<br>
+    <p>C O F F E E &nbsp; A N D &nbsp; B A K E R Y</p>
+    <a class="home-hero-button" href="pastries.html" data-aos="zoom-in-up" data-aos-duration="900"> MENU </a> 
+  </div>
+
+  <main>
+    <!-- menu -->
+    <center> 
+      <h2 data-aos="fade-down" data-aos-duration="300"> ~P R O D U C T S~ </h2>
+    </center>
+    
+    <div class="container center menu" data-aos="fade-up" data-aos-duration="800">
+      <div class="menu-item">
+        <img src="imgs/cake.png">
+        <h4> Indulge in the sweetness of life with our delectable cakes, baked fresh just for you! Celebrate every occasion with our masterfully crafted cakes, designed to make moments memorable. </h4>
+        <br>
+        <br>
+        <a class="menu-item-button" href="cakes.html"> Cakes </a>
+      </div>
+      <div class="menu-item">
+        <img src="imgs/pastry.png">
+        <h4> Experience pure bliss with our premium pastries, a treat that's as delightful as it looks. Celebrate with us and discover why our pastries are the highlight of every gathering. </h4>
+        <br>
+        <br>
+        <a class="menu-item-button" href="pastries.html"> Pastries </a>
+      </div>
+      <div class="menu-item">
+        <img src="imgs/drink.png">
+        <h4> Savor the moment with our specialty coffee, crafted with passion and creativity. There's a blend for every taste and every preference. Indulge in the richness to a cup of pure delight. </h4>
+        <br>
+        <br>
+        <a class="menu-item-button" href="drinks.html"> Drinks </a>
+      </div>
+    </div>
+
+    <!-- <div id="cakes">
+      
+    </div> -->
+    
+  </main>
+
+  <footer>
+    <div class="footer-content" data-aos="fade-up" data-aos-duration="466">
+      <h3 style="font-family: 'Open Sans', Arial, sans-serif;">BREAD BASKET</h3>
+      <p style="font-family: 'Monospace', Lucida Console;"> Where every bite feels like home. Bread Basket brings warmth and sweetness to your day. Our commitment to quality means every bite is as delicious as the last.</p>
+    <div class="social-icon">
+    <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a>
+    </div>
+    </div>
+      <div class="footer-bottom">
+        <p style="font-family: 'Monospace', Lucida Console;"> Copyright &copy;2024 Database Project. Designed by <span>Abbie Zheng & Althea Magtibay</span></p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

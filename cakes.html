@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cakes</title>
+
+  <!-- components -->
+  <link href="components.css" rel="stylesheet" type="text/css" />
+  <script src="components.js"></script>
+
+  <!-- styling -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- JQUERY, JS Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="cakes.js"></script>
+</head>
+
+<body onload="init()">
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- nav -->
+  <header class="nav-container">
+    <a href="index.html" class="logo">Bread Basket</a>
+
+    <nav class="nav-text">
+      <a href="index.html">Home</a>
+      <a href="cakes.html">Cakes</a>
+      <a href="pastries.html">Pastries</a>
+      <a href="drinks.html">Drinks</a>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <div class="cakes-hero center">
+    <div class="cakes-hero-text">Slice into 
+      <br> 
+      Something Sweet 
+      <br>
+      <p style="font-size: 20px; font-family: 'Roboto Thin', sans-serif; font-weight: 100;"> S W E E T &nbsp; A N D &nbsp; D E L I G H T F U L </p>
+    </div>
+  </div>
+  
+  <!-- main -->
+  <div class="container cakes-filters">
+    <div class="container cakes-radios">
+      <input type="radio" id="choice1" name="Stock" onclick="radio(1, cakes, 'Availability', 'output')">
+      <label for="choice1"> In Stock </label>
+
+      <input type="radio" id="choice2" name="Stock" onclick="radio(0, cakes, 'Availability', 'output')">
+      <label for="choice2"> Not in Stock </label>
+    </div>
+
+    <div class="container cakes-dropdown">
+      <p> Sort by: </p>
+      <div class="cakes-dropdown-cake">
+        <select id="sort-cakes"></select>
+      </div>
+      <br>
+      <div class="cakes-dropdown-cake">
+        <select id="sort-price">
+          <option value="High to Low"> High to Low </option>
+          <option value="Low to High"> Low to High </option>
+        </select>
+      </div>
+      <br>
+
+      <div class="container cakes-search">
+        <input type="text" id="cake-name" placeholder="Search by cake name">&nbsp;
+        <button id="cakes-search-button" class="cakes-search-button">View</button>
+      </div>
+
+      <a href="" class="container center cakes-filters-button" onclick="init()" style="margin: 0 0 0 51vw; width: 100px"> Reset Filters </a>
+    </div>
+  </div>
+
+  <hr style="color:brown">
+
+  <div id="output">
+    <div class="cakes-item" id="shortcake-section">
+      <center data-aos="zoom-in"> <h1> ~Shortcakes~ </h1> </center>
+      <div id="shortcakes"></div>
+    </div>
+
+    <div class="cakes-item" id="cheesecake-section">
+      <center data-aos="zoom-in"> <h1> ~Cheesecakes~ </h1> </center>
+      <div id="cheesecakes"></div>
+    </div>
+
+    <div class="cakes-item" id="bundtcake-section">
+      <center data-aos="zoom-in"> <h1> ~Bundt Cakes~ </h1> </center>
+      <div id="bundtcakes"></div>
+    </div>
+
+    <div class="cakes-item" id="spongecake-section">
+      <center data-aos="zoom-in"> <h1> ~Sponge Cakes~ </h1> </center>
+      <div id="spongecakes"></div>
+    </div>
+  </div>
+
+  <div id= "miniVD" data-aos="flip-up" data-aos-duration="700">
+    <div class="container center">
+      <video autoplay loop muted plays-inline class="cakes-video">
+        <source src="vids/cakeVID.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="cakes-video-text" data-aos="fade-up" data-aos-duration="700">
+    <h2 style= "font-style: italic; font-family: 'Garamond'; font-size: 30px; color: #3C280D;">~~Sweeten your special moments with our delicious cakes~~ <br>Each cake is baked fresh and designed to perfection!</h2>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content" data-aos="fade-up" data-aos-duration="466">
+      <h3 style="font-family: 'Open Sans', Arial, sans-serif;">BREAD BASKET</h3>
+      <p style="font-family: 'Monospace', Lucida Console;"> Where every bite feels like home. Bread Basket brings warmth and sweetness to your day. Our commitment to quality means every bite is as delicious as the last.</p>
+    <div class="social-icon">
+    <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/home" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a>
+    <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a>
+    </div>
+    </div>
+      <div class="footer-bottom">
+        <p style="font-family: 'Monospace', Lucida Console;"> Copyright &copy;2024 Database Project. Designed by <span>Abbie Zheng & Althea Magtibay</span></p>
+  </footer>
+</body>
+</html>

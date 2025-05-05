@@ -1,0 +1,599 @@
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s !important;
+  }
+  
+body{
+  min-height: 100vh;
+  background: #F7EBD6;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+}
+
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+center h2{
+  padding-top: 1.25cm; 
+  padding-bottom: 20px;  
+  font-size:40px; 
+  font-weight: bold; 
+  font-family: 'Garamond';
+  color: #3C280D;
+}
+
+center h1{
+  padding-top: 1.25cm; 
+  padding-bottom: 20px;  
+  font-size:40px; 
+  font-weight: bold; 
+  font-family: 'Garamond';
+  color: #3C280D;
+}
+
+/* navigation */
+.nav-container {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-text {
+  display: flex;
+  gap: 40px; /* Increase the gap between links */
+}
+
+.nav-text a{
+  font-family: "Century Gothic", sans-serif;
+  text-decoration: none;
+  font-size: 24px;
+  transition: font-size 0.3s ease;
+}
+
+.nav-text a:hover {
+  font-size: 25px;
+}
+
+.nav-container::before{
+  content: '.';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: .5s;
+}
+
+.nav-container:hover:before{
+  left: 100%;
+}
+
+.logo{
+  font-family: 'Avantgarde', sans-serif;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+}
+
+.nav-container .logo:hover{
+  font-size: 34px;
+  transition: .3s;
+}
+
+.nav-text a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: .3s;
+}
+
+.nav-text a:hover {
+  color: #3C280D;
+}
+
+
+/* footer */
+footer{
+  transition: 0.5s;
+  box-sizing: border-box;
+  background: #000000;
+  height: auto;
+  width: 100vw;
+  font-family: "Open Sans";
+  padding-top: 10px;
+  color: #fff;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+  margin: 19px;
+  padding: 8px;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.footer-bottom{
+  transition: 0.5s;
+  background: #000;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  font-family: 'Monospace', Lucida Console;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+.footer-content h3:hover{
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.social-icon{
+  margin-top: 6px;
+  margin-bottom: 15px;
+}
+.social-icon i{
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+  color:	rgb(255,255,255)
+}
+
+.social-icon i:hover{
+  transform:rotate(45deg);
+  color: aqua;
+
+}
+
+/* home-hero */
+.home-hero{
+  width: 100vw;
+  height: 115vh;
+  object-fit: cover;
+}
+
+.home-hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Garamond';
+  font-size: 90px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.home-hero-text p {
+  font-size: 20px; 
+  font-family: 'Roboto Thin', sans-serif; 
+  font-weight: 100;
+}
+
+.home-hero-button {
+  margin: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 25px;
+  color: white;
+  background-color: rgb(163, 141, 123);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  justify-content: center;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 300; /* Added this line to make the font thinner */
+  border-color: white;
+  border: 2px solid white;
+  box-shadow: 2px 3px 2px white;
+}
+
+.home-hero-button:hover {
+  background-color: #E7E7E5; /* Darker shade of blue */
+  transition: 0.2s !important;
+}
+
+/* home-main */
+#menu {
+  margin: 1em 0 1em 0;
+}
+.menu {
+  margin: 2em;
+  flex-direction: row;
+  flex: 1;
+  gap: 1em;
+}
+
+.menu-item {
+  border-radius: 25px;
+  /* border: 2px solid rgb(162,106,77); */
+  background: rgba(243,217,178,255);
+  padding: 1em;
+  height: 53vh;
+}
+
+.menu-item img {
+  height: 19vh;
+  width: 12vw;
+}
+
+.menu-item h4 {
+  font-family: 'Garamond'; 
+  color: #3C280D;
+  font-size: 1.5em;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+}
+
+.menu-item-button {
+  text-decoration: none;
+  padding: 10px 25px;
+  color: #3C280D;
+  border-radius: 15px;
+  background: rgba(244,226,200,255);
+}
+
+.menu-item-button:hover {
+  color: rgba(244,226,200,255);
+  border-radius: 15px;
+  background: #3C280D;
+}
+
+/* cakes-hero */
+.cakes-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 230px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 70px 60px rgb(0 0 0 / 30%);
+  background-image: url(imgs/cakeB.jpg);
+}
+
+.cakes-hero-text {
+  font-family: 'Poppins', middleton;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 76px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+/* cakes-main */
+.cakes-filters {
+  padding: 0.5em;
+  gap: 1em;
+  background-color: #3C280D;
+  color: #FCF4E7;
+  display: flex;
+}
+
+.cakes-filters label, option, a, p {
+  font-family: 'Garamond';
+}
+
+.cakes-radios{
+  gap: 11px;
+  padding: 5px 0;
+}
+
+.cakes-dropdown {
+  gap: 5px;
+  padding: 4px 0 0 0;
+}
+
+.cakes-item {
+  padding: 1em 0;
+}
+
+.cakes-filters-button {
+  margin: 1px 0 0 0;
+  border-radius: 20px;
+  width: 80px;
+  height: 18px;
+  background-color: #FCF4E7;
+  text-decoration: none; 
+  color: #3C280D;
+}
+
+/* cakes-video */
+.cakes-video {
+  width: 400px; 
+  height: auto; 
+  width: 50%;
+  height: auto; 
+  border-radius: 15px;
+}
+
+.cakes-video-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* pastries-hero */
+.pastries-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 230px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 70px 60px rgb(0 0 0 / 30%);
+  /* text-shadow: 1px 1px 5px black; */
+  background-image: linear-gradient(45deg,rgba(111,127,93, 0.4),rgba(97, 87, 70, 0.4)), url(imgs/bk1.jpg);
+}
+
+.pastries-hero-text {
+  font-family: 'Poppins', middleton;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 76px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+/* pastries-main */
+.pastries-main {
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* drinks-hero */
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.carousel-inner {
+  width: 100vw;
+  height: 100vh;
+}
+
+i {
+  background-image: none;
+  font-size: 2rem;
+  color: #FFF;
+}
+
+.c-img {
+  filter: brightness(0.6);
+}
+
+.drinks-hero-text {
+  font-family: 'Poppins', middleton;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 76px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+
+#intro-info {
+  color: #291905;
+  padding: 20px;
+  flex: 1;
+  margin: 1px;
+}
+
+
+#intro-info h1 {
+  text-align: left;
+}
+
+#intro-info p {
+  color: #291905;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#intro-img {
+  padding: 20px;
+  flex: 1;
+  border-radius: 8px;
+}
+
+#intro-img img {
+  border-radius: 10px;
+  flex: 1;
+}
+
+#intro-img img:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* Filter*/
+select{
+  color: #3C280D;
+  font-family: 'Garamond';
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+option{
+  color: #3C280D;
+  font-family: 'Garamond';
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+#cake-name{
+  padding: 1px 1px; 
+  font-size: 14px; 
+  height: 20px;
+  color:  #3C280D;
+  font-family: 'Garamond';
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cakes-search-button {
+    padding: 1px 5px; 
+    font-size: 14px; 
+    text-decoration: none;
+    height: 18px;
+    background-color: #FCF4E7;
+    color: #3C280D;
+    font-family: 'Garamond';
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* COLLAPSABLE INSIDE*/
+.cakes-item h1{
+  font-family: 'Garamond';
+  color: #3C280D;
+  font-size: 40px;
+  text-align: center;
+}
+.cakes-item h1:hover{
+  font-size: 46px;
+  -webkit-text-stroke: 2px #3C280D;;
+  color: transparent;
+  transition: 0.5s;
+}
+
+.cakes-item-small img{
+  flex: 1;
+  max-width: 27%;
+  max-height: 25%;
+  padding: 0.5em;
+}
+
+.cakes-item-small {
+  display: flex;
+  margin-left: 1%;
+}
+
+.cakes-item-small img:hover{
+    -webkit-transform: scale(1.05);
+     transform: scale(1.05);
+}
+
+#intro-info {
+  color: #3C280D;
+  padding: 20px;
+  flex: 1;
+  margin: 1px;
+  font-weight: bold;
+  font-family: "Garamond";
+}
+
+#intro-info p {
+    border-radius: 8px;
+    font-family: "Garamond";
+    color: #3C280D;
+  font-size: 18px;
+}
+
+#intro-info h1 {
+    font-family: "Roboto Thin", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: left;
+    font-size: 33px;
+}
+
+#intro-info h2{
+  font-weight: bold;
+  font-family: "Garamond";
+}
+
+
+#intro-img img:hover{
+    -webkit-transform: scale(1.05);
+     transform: scale(1.05);
+}
+
+#miniVD{
+  padding: 1.50cm;
+}
+
+
+
+
